@@ -1,6 +1,5 @@
-const Message = (props) => {
-    console.log(props);
-    return <p>{props.message}</p>
+const Message = ({message}) => {
+    return <p>{message}</p>
 }
 
 export default Message;
