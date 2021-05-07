@@ -1,10 +1,14 @@
+import { Link } from 'wouter';
 import './index.css';
 
 const GifResult = ( {id, title, url} ) => {
+
     return (
-    <a href={`/gif/${id}`} className="GifResult">
+    <Link to={`/gif/${id}`}>
+      <span className="GifResult">
         <img className="thumbs" loading='lazy' src={url} alt={title}/>
-    </a>
+      </span>
+    </Link>
   );
 }
 

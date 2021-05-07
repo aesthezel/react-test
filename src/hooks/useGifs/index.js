@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import getGifs from '../../services/getGifs';
+
+import GifVault from '../../context/GifVault';
 
 export function useGifs ({ search } = { search: null }) {
 
     const [loading, setLoading] = useState(false);
-    const [gifs, setGifs] = useState([]);
+    const { gifs, setGifs } = useContext(GifVault);
 
     useEffect(() => {
         setLoading(true);

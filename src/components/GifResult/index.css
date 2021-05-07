@@ -1,7 +1,8 @@
 .GifResult {
     color: #fff;
     text-decoration: none;
-    margin: 3px;
+    margin: 10px;
+    padding: 5px;
 }
 
 .GifResult img {
@@ -13,7 +14,7 @@
     font-size: 15px;
 }
 
-.GifResult .thumbs {
-    width: 30%;
-    height: 30%;
+.GifResult img.thumbs {
+    width: 50%;
+    height: 50%;
   }

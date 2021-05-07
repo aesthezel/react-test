@@ -9,6 +9,7 @@ import Detail from './pages/Detail';
 import SearchResults from './pages/SearchResults';
 
 import StaticVault from './context/StaticVault';
+import { GifVaultProvider } from './context/GifVault';
 
 function App() {
   return (
@@ -17,9 +18,12 @@ function App() {
         <section className="App-content">
 
           <Title content="GIFs Palace 👑" />
-          <Route path="/" component={Front} />
-          <Route path="/search/:search" component={SearchResults} />
-          <Route path="/gif/:id" component={Detail} />
+
+          <GifVaultProvider>
+            <Route path="/" component={Front} />
+            <Route path="/search/:search" component={SearchResults} />
+            <Route path="/gif/:id" component={Detail} />
+          </GifVaultProvider>
 
         </section>
       </div>
