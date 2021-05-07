@@ -1,0 +1,28 @@
+:root {
+    --columns: 2;
+}
+
+.ListOfGifs {
+    column-count: var(--columns);
+    column-gap: .3em;
+}
+
+.ListOfGifs-items {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background-color: #eee;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    :root {
+        --columns: 3;
+    }
+}
+
+@media (min-width: 900px) {
+    :root {
+        --columns: 4;
+    }
+}

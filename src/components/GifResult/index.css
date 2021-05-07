@@ -1,0 +1,19 @@
+.GifResult {
+    color: #fff;
+    text-decoration: none;
+    margin: 3px;
+}
+
+.GifResult img {
+    object-fit: contain;
+    align-items: center;
+}
+
+.GifResult span {
+    font-size: 15px;
+}
+
+.GifResult .thumbs {
+    width: 30%;
+    height: 30%;
+  }

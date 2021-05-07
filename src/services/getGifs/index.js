@@ -1,8 +1,8 @@
 const API_KEY = 'ORW0lH7Jwr1zeH9rLPXEoNMkw9xaixHN';
 
-export default function getGifs ({search = 'darksouls'} = {}) {
+export default function getGifs ({search = 'darksouls', results = 10} = {}) {
 
-    const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${search}&limit=5&offset=0&rating=g&lang=en`;
+    const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${search}&limit=${results}&offset=0&rating=g&lang=en`;
 
     return (
             fetch(API_URL)

@@ -1,28 +1,29 @@
-import { Link, Route } from 'wouter';
+import { Route } from 'wouter';
 
 import './App.css';
 
-import Message from './components/Message.js';
-import Title from './components/Title.js';
-import ListOFGifs from './components/ListOfGifs.js';
+import Title from './components/Title';
+
+import Front from './pages/Front';
+import Detail from './pages/Detail';
+import SearchResults from './pages/SearchResults';
+
+import StaticVault from './context/StaticVault';
 
 function App() {
-
-
   return (
-    <div className="App">
-      <section className="App-content">
+    <StaticVault.Provider value={2}>
+      <div className="App">
+        <section className="App-content">
 
-        <Title content="Gif Place"/>
-        <Route path="/gif/:search" component={ListOFGifs} />
+          <Title content="GIFs Palace 👑" />
+          <Route path="/" component={Front} />
+          <Route path="/search/:search" component={SearchResults} />
+          <Route path="/gif/:id" component={Detail} />
 
-        <Message message="Quizas te interese buscar..." />
-        <Link to="/gif/darksouls" className="link" >GIFs de Dark Souls</Link>
-        <Link to="/gif/bloodborne" className="link">GIFs de Bloodborne</Link>
-        <Link to="/gif/nier" className="link">GIFs de NieR</Link>
-
-      </section>
-    </div>
+        </section>
+      </div>
+    </StaticVault.Provider>
   );
 }
 
